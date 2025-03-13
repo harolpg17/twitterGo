@@ -1,6 +1,6 @@
 git add .
 git commit -m "Último Commit"
 git push
-go build -o bootstrap main.go
+GOOS=linux GOARCH=amd64  go build -o bootstrap main.go
 rm main.zip
 zip main.zip main
