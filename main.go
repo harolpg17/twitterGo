@@ -58,6 +58,7 @@ func EjecutoLambda(ctx context.Context, request events.APIGatewayProxyRequest) (
 	}
 
 	fmt.Println("PathParameters: ", strings.Join(keys, ", "))
+	fmt.Println("PathParameters Count: ", len(request.PathParameters))
 
 	fmt.Println("UrlPrefix: " + os.Getenv("UrlPrefix"))
 
