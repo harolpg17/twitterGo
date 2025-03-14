@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"os"
 	"strings"
 
@@ -45,6 +46,9 @@ func EjecutoLambda(ctx context.Context, request events.APIGatewayProxyRequest) (
 		}
 		return res, nil
 	}
+
+	fmt.Println("Path: " + request.PathParameters["twittergo"])
+	fmt.Println("UrlPrefix: " + os.Getenv("UrlPrefix"))
 
 	path := strings.Replace(request.PathParameters["twittergo"], os.Getenv("UrlPrefix"), "", -1)
 
