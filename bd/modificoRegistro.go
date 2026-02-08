@@ -42,8 +42,8 @@ func ModificoRegistro(u models.Usuario, ID string) (bool, error) {
 		registro["ubicacion"] = u.Ubicacion
 	}
 
-	if len(u.SitioWeb) > 0 {
-		registro["sitioWeb"] = u.SitioWeb
+	if len(u.Sitioweb) > 0 {
+		registro["sitioweb"] = u.Sitioweb
 	}
 
 	updateString := bson.M{
